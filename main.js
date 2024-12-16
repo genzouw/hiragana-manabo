@@ -52,7 +52,6 @@ const wordData = {
   わ: { word: "わに", image: "wa.png", reading: "わに" },
 };
 
-const gameHistory = [];
 let totalQuestions = 10;
 
 document.addEventListener("DOMContentLoaded", function () {

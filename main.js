@@ -67,32 +67,39 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentQuestion;
   let currentQuestionIndex = 0;
   let correctAnswers = 0;
+  const completedQuestions = [];
   let gameHistory = [];
 
   function generateHiraganaQuestion() {
     console.log("start : generateHiraganaQuestion");
-    const selectedHiragana = Array.from(
+    let availableQuestions = Array.from(
       document.querySelectorAll('#settings input[type="checkbox"]:checked'),
     ).map((checkbox) => checkbox.value);
 
-    if (selectedHiragana.length === 0) {
+    if (availableQuestions.length === 0) {
       alert("少なくとも一つのひらがなを選択してください。");
       return null;
     }
 
-    let hiragana;
+    if (availableQuestions.length <= completedQuestions.length) {
+      completedQuestions.length = 0;
+    }
 
-    do {
-      hiragana =
-        selectedHiragana[Math.floor(Math.random() * selectedHiragana.length)];
-    } while (gameHistory.some((history) => history.question === hiragana));
+    availableQuestions = availableQuestions.filter(
+      (hiragana) => !completedQuestions.includes(hiragana),
+    );
+
+    const questionKey =
+      availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+
+    completedQuestions.push(questionKey);
 
     return {
-      hiragana: hiragana,
-      word: wordData[hiragana].word,
-      image: wordData[hiragana].image,
-      reading: wordData[hiragana].reading,
-      question: wordData[hiragana].word.replace(/^./, "〇"),
+      hiragana: questionKey,
+      word: wordData[questionKey].word,
+      image: wordData[questionKey].image,
+      reading: wordData[questionKey].reading,
+      question: wordData[questionKey].word.replace(/^./, "■"),
     };
   }
 

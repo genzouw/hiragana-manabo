@@ -1,0 +1,82 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ひらがな学習アプリ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="question"></div>
+    <img id="word-image" style="display: none" />
+    <div id="choices">
+      <button class="choice-btn"></button>
+      <button class="choice-btn"></button>
+      <button class="choice-btn"></button>
+      <button class="choice-btn"></button>
+    </div>
+    <button id="start-btn">スタート</button>
+
+    <div id="score"></div>
+
+    <h2>ゲーム履歴</h2>
+
+    <div id="history"></div>
+
+    <h2>設定</h2>
+
+    <div id="settings">
+      <h3>ひらがなの範囲</h3>
+
+      <label><input type="checkbox" value="あ" checked /> あ</label>
+      <label><input type="checkbox" value="い" checked /> い</label>
+      <label><input type="checkbox" value="う" checked /> う</label>
+      <label><input type="checkbox" value="え" checked /> え</label>
+      <label><input type="checkbox" value="お" checked /> お</label>
+      <label><input type="checkbox" value="か" checked /> か</label>
+      <label><input type="checkbox" value="き" checked /> き</label>
+      <label><input type="checkbox" value="く" checked /> く</label>
+      <label><input type="checkbox" value="け" checked /> け</label>
+      <label><input type="checkbox" value="こ" checked /> こ</label>
+      <label><input type="checkbox" value="さ" checked /> さ</label>
+      <label><input type="checkbox" value="し" checked /> し</label>
+      <label><input type="checkbox" value="す" checked /> す</label>
+      <label><input type="checkbox" value="せ" checked /> せ</label>
+      <label><input type="checkbox" value="そ" checked /> そ</label>
+      <label><input type="checkbox" value="た" checked /> た</label>
+      <label><input type="checkbox" value="ち" checked /> ち</label>
+      <label><input type="checkbox" value="つ" checked /> つ</label>
+      <label><input type="checkbox" value="て" checked /> て</label>
+      <label><input type="checkbox" value="と" checked /> と</label>
+      <label><input type="checkbox" value="な" checked /> な</label>
+      <label><input type="checkbox" value="に" checked /> に</label>
+      <label><input type="checkbox" value="ぬ" checked /> ぬ</label>
+      <label><input type="checkbox" value="ね" checked /> ね</label>
+      <label><input type="checkbox" value="の" checked /> の</label>
+      <label><input type="checkbox" value="は" checked /> は</label>
+      <label><input type="checkbox" value="ひ" checked /> ひ</label>
+      <label><input type="checkbox" value="ふ" checked /> ふ</label>
+      <label><input type="checkbox" value="へ" checked /> へ</label>
+      <label><input type="checkbox" value="ほ" checked /> ほ</label>
+      <label><input type="checkbox" value="ま" checked /> ま</label>
+      <label><input type="checkbox" value="み" checked /> み</label>
+      <label><input type="checkbox" value="む" checked /> む</label>
+      <label><input type="checkbox" value="め" checked /> め</label>
+      <label><input type="checkbox" value="も" checked /> も</label>
+      <label><input type="checkbox" value="や" checked /> や</label>
+      <label><input type="checkbox" value="ゆ" checked /> ゆ</label>
+      <label><input type="checkbox" value="よ" checked /> よ</label>
+      <label><input type="checkbox" value="ら" checked /> ら</label>
+      <label><input type="checkbox" value="り" checked /> り</label>
+      <label><input type="checkbox" value="る" checked /> る</label>
+      <label><input type="checkbox" value="れ" checked /> れ</label>
+      <label><input type="checkbox" value="ろ" checked /> ろ</label>
+      <label><input type="checkbox" value="わ" checked /> わ</label>
+      <label><input type="checkbox" value="を" checked /> を</label>
+      <label><input type="checkbox" value="ん" checked /> ん</label>
+      <br />
+      <h3>問題数</h3>
+      <input type="number" id="questionCount" value="10" min="1" max="50" />
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

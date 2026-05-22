@@ -40,7 +40,7 @@ reviews:
     - path: ".github/workflows/**"
       instructions: |
         GitHub Actions ワークフローとしてレビューしてください:
-        - シークレットの露出 (echo / set-output 経由のリーク) が無いか。
+        - シークレットの露出 (echo / `$GITHUB_OUTPUT` への書き込み経由のリーク) が無いか。なお `::set-output` は非推奨であり、使用箇所があれば指摘すること。
         - 外部 action は SHA pin されているか。
         - permissions: が最小権限になっているか。
 
